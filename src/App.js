@@ -1,6 +1,6 @@
-import ContactForm from './ContactForm-ui/ContactForm';
-import Filter from './Filter-ui/filter';
-import ContactList from './ContactList-ui/ContactList';
+import ContactForm from './Components/ContactForm/ContactForm';
+import Filter from './Components/Filter/Filter';
+import ContactList from './Components/ContactList/ContactList';
 import styles from './styles.module.css';
 import {
   getItems,

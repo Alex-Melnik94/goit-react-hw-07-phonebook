@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import styles from './contact-form.module.css';
-import { addContact } from '../redux/phonebook/slices/phonebookSlice';
-import { getItems } from '../redux/phonebook/contacts-selectors';
+import { addContact } from '../../redux/phonebook/slices/phonebookSlice';
+import { getItems } from '../../redux/phonebook/contacts-selectors';
 
 export default function Form() {
   const [name, setName] = useState('');
@@ -24,6 +24,7 @@ export default function Form() {
     const sameContact = contacts.find(prevContact => prevContact.name === name);
 
     if (sameContact) {
+      resetForm();
       alert(`${sameContact.name} is already in contacts`);
       return;
     }
